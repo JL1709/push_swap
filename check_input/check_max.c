@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_max.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
+/*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 20:56:29 by julian            #+#    #+#             */
-/*   Updated: 2021/08/27 12:05:35 by jludt            ###   ########.fr       */
+/*   Updated: 2021/08/30 11:38:50 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,34 +17,34 @@ static void	check_max2(char *s[], int i)
 	if (s[i][0] == '2' && s[i][1] == '1' && s[i][2] == '4' && s[i][3] == '7' &&
 		s[i][4] == '4' && s[i][5] == '8' && s[i][6] == '3' && s[i][7] == '6' &&
 		s[i][8] == '4' && s[i][9] > '7')
-		print_error();
+		print_error(s);
 }
 
 void	check_max(char *s[], int i)
 {
 	if (s[i][0] > '2')
-		print_error();
+		print_error(s);
 	if (s[i][0] == '2' && s[i][1] > '1')
-		print_error();
+		print_error(s);
 	if (s[i][0] == '2' && s[i][1] == '1' && s[i][2] > '4')
-		print_error();
+		print_error(s);
 	if (s[i][0] == '2' && s[i][1] == '1' && s[i][2] == '4' && s[i][3] > '7')
-		print_error();
+		print_error(s);
 	if (s[i][0] == '2' && s[i][1] == '1' && s[i][2] == '4' && s[i][3] == '7' &&
 		s[i][4] > '4')
-		print_error();
+		print_error(s);
 	if (s[i][0] == '2' && s[i][1] == '1' && s[i][2] == '4' && s[i][3] == '7' &&
 		s[i][4] == '4' && s[i][5] > '8')
-		print_error();
+		print_error(s);
 	if (s[i][0] == '2' && s[i][1] == '1' && s[i][2] == '4' && s[i][3] == '7' &&
 		s[i][4] == '4' && s[i][5] == '8' && s[i][6] > '3')
-		print_error();
+		print_error(s);
 	if (s[i][0] == '2' && s[i][1] == '1' && s[i][2] == '4' && s[i][3] == '7' &&
 		s[i][4] == '4' && s[i][5] == '8' && s[i][6] == '3' && s[i][7] > '6')
-		print_error();
+		print_error(s);
 	if (s[i][0] == '2' && s[i][1] == '1' && s[i][2] == '4' && s[i][3] == '7' &&
 		s[i][4] == '4' && s[i][5] == '8' && s[i][6] == '3' && s[i][7] == '6' &&
 		s[i][8] > '4')
-		print_error();
+		print_error(s);
 	check_max2(s, i);
 }

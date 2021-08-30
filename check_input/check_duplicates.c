@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   check_duplicates.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
+/*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 20:55:34 by julian            #+#    #+#             */
-/*   Updated: 2021/08/27 12:03:15 by jludt            ###   ########.fr       */
+/*   Updated: 2021/08/30 11:39:44 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	check_duplicates(int stack_size, int *stack)
+void	check_duplicates(int stack_size, int *stack, char **input)
 {
 	int	i;
 	int	j;
@@ -24,7 +24,7 @@ void	check_duplicates(int stack_size, int *stack)
 		while (j < stack_size)
 		{
 			if (stack[i] == stack[j])
-				print_error();
+				print_error(input);
 			j++;
 		}
 		i++;

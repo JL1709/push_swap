@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_min.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
+/*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 20:56:57 by julian            #+#    #+#             */
-/*   Updated: 2021/08/27 12:06:13 by jludt            ###   ########.fr       */
+/*   Updated: 2021/08/30 11:39:00 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,34 +17,34 @@ static void	check_min2(char *s[], int i)
 	if (s[i][1] == '2' && s[i][2] == '1' && s[i][3] == '4' && s[i][4] == '7' &&
 		s[i][5] == '4' && s[i][6] == '8' && s[i][7] == '3' && s[i][8] == '6' &&
 		s[i][9] == '4' && s[i][10] > '8')
-		print_error();
+		print_error(s);
 }
 
 void	check_min(char *s[], int i)
 {
 	if (s[i][1] > '2')
-		print_error();
+		print_error(s);
 	if (s[i][1] == '2' && s[i][2] > '1')
-		print_error();
+		print_error(s);
 	if (s[i][1] == '2' && s[i][2] == '1' && s[i][3] > '4')
-		print_error();
+		print_error(s);
 	if (s[i][1] == '2' && s[i][2] == '1' && s[i][3] == '4' && s[i][4] > '7')
-		print_error();
+		print_error(s);
 	if (s[i][1] == '2' && s[i][2] == '1' && s[i][3] == '4' && s[i][4] == '7' &&
 		s[i][5] > '4')
-		print_error();
+		print_error(s);
 	if (s[i][1] == '2' && s[i][2] == '1' && s[i][3] == '4' && s[i][4] == '7' &&
 		s[i][5] == '4' && s[i][6] > '8')
-		print_error();
+		print_error(s);
 	if (s[i][1] == '2' && s[i][2] == '1' && s[i][3] == '4' && s[i][4] == '7' &&
 		s[i][5] == '4' && s[i][6] == '8' && s[i][7] > '3')
-		print_error();
+		print_error(s);
 	if (s[i][1] == '2' && s[i][2] == '1' && s[i][3] == '4' && s[i][4] == '7' &&
 		s[i][5] == '4' && s[i][6] == '8' && s[i][7] == '3' && s[i][8] > '6')
-		print_error();
+		print_error(s);
 	if (s[i][1] == '2' && s[i][2] == '1' && s[i][3] == '4' && s[i][4] == '7' &&
 		s[i][5] == '4' && s[i][6] == '8' && s[i][7] == '3' && s[i][8] == '6' &&
 		s[i][9] > '4')
-		print_error();
+		print_error(s);
 	check_min2(s, i);
 }

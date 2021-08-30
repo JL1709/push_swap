@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_digits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
+/*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 20:55:03 by julian            #+#    #+#             */
-/*   Updated: 2021/08/27 18:41:47 by jludt            ###   ########.fr       */
+/*   Updated: 2021/08/30 11:35:26 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ void	check_digits(int stack_size, char **input)
 		else
 			j = 0;
 		if (input[i][0] == '-' && ft_isdigit(input[i][1]) != 1)
-			print_error();
+			print_error(input);
 		while (input[i][j] != '\0')
 		{
 			if (ft_isdigit(input[i][j]) != 1)
-				print_error();
+				print_error(input);
 			j++;
 		}
 	}

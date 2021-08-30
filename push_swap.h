@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
+/*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 10:55:05 by julian            #+#    #+#             */
-/*   Updated: 2021/08/27 18:35:52 by jludt            ###   ########.fr       */
+/*   Updated: 2021/08/30 11:39:55 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,15 @@ typedef struct s_radix
 char	**get_input(char *argv[], int argc);
 int		get_stack_size(char **input);
 void	check_digits(int argc, char *argv[]);
-void	check_duplicates(int stack_size, int *stack);
+void	check_duplicates(int stack_size, int *stack, char **input);
 void	check_input(int argc, char *argv[]);
 void	check_max(char *s[], int i);
 void	check_min_max(int stack_size, char *argv[]);
 void	check_min(char *s[], int i);
-void	print_error(void);
+void	print_error(char **s);
 
 void	initialize_stack(int argc, char *argv[], t_list **stack_a);
-void	a_already_sorted(t_list	**stack_a, char **input);
+int		a_already_sorted(t_list	**stack_a, char **input);
 void	sort_small_stack(t_list **stack_a, t_list **stack_b);
 void	sort_two(t_list **stack_a);
 void	sort_three(t_list **stack_a);
@@ -46,6 +46,7 @@ void	sort_four(t_list **stack_a, t_list **stack_b);
 void	sort_five(t_list **stack_a, t_list **stack_b);
 void	radix_sort(t_list **stack_a, t_list **stack_b, int stack_size);
 void	free_list(t_list **stack_a);
+void	free_arr(char **src);
 
 void	sa(t_list **stack_a);
 void	sb(t_list **stack_b);

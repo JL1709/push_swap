@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   a_already_sorted.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
+/*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/22 12:38:58 by julian            #+#    #+#             */
-/*   Updated: 2021/08/27 18:35:28 by jludt            ###   ########.fr       */
+/*   Updated: 2021/08/30 11:34:41 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	a_already_sorted(t_list	**stack_a, char **input)
+int	a_already_sorted(t_list	**stack_a, char **input)
 {
 	t_list	*tmp;
 	int		stack_size;
@@ -22,9 +22,10 @@ void	a_already_sorted(t_list	**stack_a, char **input)
 	while (--stack_size)
 	{
 		if (tmp->content > tmp->next->content)
-			return ;
+			return (1);
 		tmp = tmp->next;
 	}
-	free(input);
+	free_arr(input);
 	free_list(stack_a);
+	return (0);
 }

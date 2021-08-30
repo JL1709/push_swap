@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jludt <jludt@student.42.fr>                +#+  +:+       +#+         #
+#    By: julian <julian@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/11 12:13:12 by jludt             #+#    #+#              #
-#    Updated: 2021/08/27 18:26:15 by jludt            ###   ########.fr        #
+#    Updated: 2021/08/30 11:45:41 by julian           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ CFILES =	push_swap.c \
 			utils/initialize_stack.c \
 			utils/a_already_sorted.c \
 			utils/free_list.c \
+			utils/free_arr.c \
 			sorting/sort_small_stack.c \
 			sorting/sort_two.c \
 			sorting/sort_three.c \
