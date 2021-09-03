@@ -6,7 +6,7 @@
 /*   By: julian <julian@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/09 10:54:08 by julian            #+#    #+#             */
-/*   Updated: 2021/08/30 11:34:52 by julian           ###   ########.fr       */
+/*   Updated: 2021/09/03 09:29:57 by julian           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int argc, char *argv[])
 	t_list	*stack_b;
 	int		sorted;
 
-	if (argc < 2)
+	if (argc < 2 || (argc == 2 && argv[1][0] == '\0'))
 		return (0);
 	input = get_input(argv, argc);
 	stack_size = get_stack_size(input);
