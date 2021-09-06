@@ -6,7 +6,7 @@
 /*   By: jludt <jludt@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 17:43:30 by jludt             #+#    #+#             */
-/*   Updated: 2021/08/27 17:44:19 by jludt            ###   ########.fr       */
+/*   Updated: 2021/09/06 11:45:19 by jludt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	**get_input(char *argv[], int argc)
 {
-	int		i; 
+	int		i;
 	char	*join;
 	char	**input;
 
