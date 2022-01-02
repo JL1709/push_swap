@@ -20,43 +20,16 @@ Tested on macOS Monterey.
 
 #### 1) Clone this repository 
 ```
-git clone git@github.com:JL1709/pipex.git
+git clone git@github.com:JL1709/push_swap.git
 ```
 
 #### 2) Run Makfile
 ```
-cd pipex
+cd push_swap
 make
 ```
 
 #### 3)  Run program
 ```
-$> ./pipex infile command1 command2 outfile
+$>./push_swap 2 1 3 6 5 8
 ```
-infile and outfile are file names, command1 and command2 are shell commands with their parameters.  
-Works like the shell command: < infile command1 | command2 > outfile
-  
-For example:
-```
-$> ./pipex infile cat wc outfile
-```
-infile provided for testing (outfile gets created automatically during execution).
-
-### pipex_bonus folder
-Provides a pipex program that can handle:
-
-#### 1) Multiple pipes
-```
-$> ./pipex infile command1 command2 command3 ... commandn outfile
-```
-Works like the shell command: < infile command1 | command2 | command3 | ... | commandn > outfile
-
-#### 2) Here document (<<) and Append operator (>>)
-```
-$> ./pipex here_doc LIMITER command1 command2 file
-```
-For example:
-```
-./pipex here_doc EOF cat wc outfile
-```
-Works like the shell command: command1 << LIMITER | command2 >> outfile
