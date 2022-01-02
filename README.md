@@ -1,7 +1,6 @@
 # push_swap
 
-This repo provides the push_swap program that sorts data on two stacks with a limited set of instructions.  
-Possible instructions:
+This repo provides the push_swap program that sorts data on two stacks with a limited set of instructions:
 - sa : swap a - swap the first 2 elements at the top of stack a.
 - sb : swap b - swap the first 2 elements at the top of stack b.
 - ss : sa and sb at the same time.
