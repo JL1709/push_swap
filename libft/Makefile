@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jludt <jludt@student.42.fr>                +#+  +:+       +#+         #
+#    By: julian <julian@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/22 09:51:20 by jludt             #+#    #+#              #
-#    Updated: 2021/08/27 16:42:22 by jludt            ###   ########.fr        #
+#    Updated: 2022/01/02 15:49:27 by julian           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,19 +29,19 @@ BONUS = ft_lstadd_back.c \
 all: $(NAME)
 
 $(NAME):
-	gcc -c -Wall -Wextra -Werror *.c
-	ar cr $(NAME) *.o
+	@gcc -c -Wall -Wextra -Werror *.c
+	@ar cr $(NAME) *.o
 
 bonus:
-	gcc -c -Wall -Wextra -Werror $(BONUS)
-	ar cr $(NAME) *.o
+	@gcc -c -Wall -Wextra -Werror $(BONUS)
+	@ar cr $(NAME) *.o
 
 .PHONY: clean fclean re
 
 clean:
-	rm -f *.o
+	@rm -f *.o
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re : fclean all

@@ -6,11 +6,16 @@
 #    By: julian <julian@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/08/11 12:13:12 by jludt             #+#    #+#              #
-#    Updated: 2021/08/30 11:45:41 by julian           ###   ########.fr        #
+#    Updated: 2022/01/02 15:51:19 by julian           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
+
+RESET	= \033[0m
+GREEN	= \033[32m
+YELLOW	= \033[33m
+BLUE	= \033[34m
 
 CC = gcc
 
@@ -53,16 +58,19 @@ CFILES =	push_swap.c \
 OBJECTS = $(CFILES:.c=.o)
 
 $(NAME):
-	make --directory=./libft
-	$(CC) $(CFILES) $(CFLAGS) -o $(NAME)
+	@make --directory=./libft
+	@$(CC) $(CFILES) $(CFLAGS) -o $(NAME)
+	@echo "$(GREEN)***   Project $(NAME) successfully compiled   ***$(RESET)"
 
-clean: 
-	rm -f $(OBJECTS)
-	make clean --directory=./libft
+clean:
+	@echo "$(BLUE)***   Deleting all objects from $(NAME)   ...   ***$(RESET)"
+	@rm -f $(OBJECTS)
+	@make clean --directory=./libft
 
 fclean:
-	rm -f $(NAME) $(OBJECTS)
-	make fclean --directory=./libft
+	@echo "$(BLUE)***   Deleting executable file from $(NAME)   ...   ***$(RESET)"
+	@rm -f $(NAME) $(OBJECTS)
+	@make fclean --directory=./libft
 
 re: fclean $(NAME)
-	make re --directory=./libft
+	@make re --directory=./libft
